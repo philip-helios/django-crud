@@ -25,12 +25,26 @@
                         <div class="tcolumn tcolumn1 th">ID</div> 
                         <div class="tcolumn tcolumn1 th">Name</div> 
                         <div class="tcolumn tcolumn2 th">Contact</div> 
+                        <div class="tcolumn tcolumn2 th">Edit</div> 
+                        <div class="tcolumn tcolumn2 th">Delete</div> 
                     </div>
                     {% for st in stu %}
                     <div class="trow"> 
-                        <div class="tcolumn">{{st.id}}</div> 
+                        <div class="tcolumn">{{forloop.counter}}</div> 
                         <div class="tcolumn">{{st.name}}</div> 
                         <div class="tcolumn">{{st.contact}}</div> 
+                        <div class="tcolumn">
+                            <form action="{% url 'deletedata' st.id %}" method="POST">
+                                {% csrf_token %}
+                                <input type="submit" class="btn btn-success" value="Edit">  
+                            </form>
+                        </div> 
+                        <div class="tcolumn">
+                            <form action="{% url 'deletedata' st.id %}" method="POST">
+                                {% csrf_token %}
+                                <input type="submit" class="btn btn-danger" value="Delete">  
+                            </form>
+                        </div> 
                     </div>
                     {% endfor %}
                 </div>     
