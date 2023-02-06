@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    padding: 30px
+}
+
+.row{
+    width: 90%;
+    margin:auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+}
+.col-50 {
+    padding: 10px;
+    border: 1px solid red;
+}
+
+.home-title {
+    text-align: center;
+}
+
+/* styling the form */
+
+.form-control {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color:white;
+}
+
+/* style for the table */
+.div-table {
+    display: table;
+    width: 100%;
+    overflow: scroll;
+    background-color: #eee;
+    border-spacing: 2px;
+    border-radius:4px;
+}
+
+.trow {
+    display: table-row;
+}
+
+.tcolumn {
+    display: table-cell;
+    vertical-align: top;
+    background-color: #fff;
+    padding: 10px 8px
+}
+
+.th {
+    background-color: black;
+    color:white;
+}
+
+.tcolumn1 {
+    width: 240px
+}
+
+.tcolumn4,
+.tcolumn5,
+.tcolumn6 {
+    width: 80px
+}
