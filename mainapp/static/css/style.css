@@ -30,6 +30,13 @@ body {
     box-sizing: border-box;
 }
 
+.update-form-wrapper {
+    width: 60%;
+    margin: auto;
+}
+
+
+
 .btn {
     display: inline-block;
     font-weight: 400;
@@ -56,6 +63,10 @@ body {
 .btn-danger {
     background-color:#dc3545;
     color:white;
+}
+
+.link-btn {
+    text-decoration: none;
 }
 
 /* style for the table */
