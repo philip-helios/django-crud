@@ -13,7 +13,8 @@
                 {% endfor %}    
             </div>
         {% endfor %}  
-        <input type="submit" class="form-btn" value="Update">
+        <input type="submit" class="form-btn btn-success" value="Update">
+        <a class="form-btn btn-update link-btn" href="{% url 'addandshow' %}" method="POST">Back to Home</a>
       </form>  
     </div>
 {% endblock content %}
