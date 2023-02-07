@@ -4,8 +4,16 @@
       <h4>Update Student Information</h4>  
       <form action="" method="post">
         {% csrf_token %}
-        {{form.as_p}}
-        <input class="btn btn-success" type="submit" value="Update">
+        {{form.non_field_errors}}
+        {% for field in form %}
+            <div class="form-input-group">
+                {{field.label_tag}} {{field}}
+                {% for error in field.errors %}
+                <span class="errorlist">{{error}}</span>
+                {% endfor %}    
+            </div>
+        {% endfor %}  
+        <input type="submit" class="form-btn" value="Update">
       </form>  
     </div>
 {% endblock content %}
