@@ -55,11 +55,7 @@ body {
     vertical-align: middle;
     cursor: pointer;
     user-select: none;
-    border: 1px solid transparent;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
+    color:white;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -68,20 +64,26 @@ body {
 }
 
 .form-btn {
-    background-color: #28a745;
     padding: 10px 20px;
+    font-size: 1rem;
     border:none;
     cursor: pointer;
-    color: white;
     border-radius: .25rem;
+    color: white;
 }
+
+
 .btn-success {
     background-color: #28a745;
-    color:white;
+    
 }
 .btn-danger {
     background-color:#dc3545;
-    color:white;
+}
+
+.btn-update {
+    background-color: #17a2b8;
+    color: white;
 }
 
 .link-btn {
@@ -130,6 +132,21 @@ body {
     .col-50 {
         width: 100%;
     }
+
+    .update-form-wrapper {
+        width: 90%;
+        margin: auto;
+    }
+
+    .form-btn {
+        padding: 8px 10px;
+        font-size: 1rem;
+        border:none;
+        cursor: pointer;
+        border-radius: .25rem;
+        color: white;
+    }
+
    .div-table {
      font-size: 12px;
    }
