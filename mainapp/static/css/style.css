@@ -55,6 +55,7 @@ body {
     vertical-align: middle;
     cursor: pointer;
     user-select: none;
+    border: none;
     color:white;
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -196,6 +197,6 @@ body {
     }
    .btn {
     font-size: 12px;
-    padding: 0px 8px;
+    padding: .175rem .50rem;
    }
   }
