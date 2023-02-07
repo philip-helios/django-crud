@@ -1,9 +1,49 @@
 {% extends 'enroll/base.html' %}
-{% block content %}
-    <h4>Add New Student</h4>
-    <form action=""  method="POST">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" class="btn btn-success" value="Add">
-    </form>
-{% endblock content %}
+{% block content %}    
+    <div class="container-main">
+        <h2 class="home-title">My Record Book</h2>
+        <div class="row">    
+            <div class="col-50">
+                <h4>Add New Student</h4>
+                <form action=""  method="POST">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <input type="submit" class="btn btn-success" value="Add">
+                </form>
+            </div> 
+            <div class="col-50">
+                <h4>Show Student Information</h4>
+                    {% if stu %}
+                    <div class="div-table"> 
+                        <div class="trow th"> 
+                            <div class="tcolumn tcolumn1 th">Serial No.</div> 
+                            <div class="tcolumn tcolumn1 th">Name</div> 
+                            <div class="tcolumn tcolumn2 th">Contact</div> 
+                            <div class="tcolumn tcolumn2 th">Edit</div> 
+                            <div class="tcolumn tcolumn2 th">Delete</div> 
+                        </div>
+                        {% for st in stu %}
+                        <div class="trow"> 
+                            <div class="tcolumn">{{forloop.counter}}</div> 
+                            <div class="tcolumn">{{st.name}}</div> 
+                            <div class="tcolumn">{{st.contact}}</div> 
+                            <div class="tcolumn">
+                                <a class="btn btn-success link-btn" href="{% url 'updatedata' st.id %}" method="POST">Edit</a>
+                                   
+                            </div> 
+                            <div class="tcolumn">
+                                <form action="{% url 'deletedata' st.id %}" method="POST">
+                                    {% csrf_token %}
+                                    <input type="submit" class="btn btn-danger" value="Delete">  
+                                </form>
+                            </div> 
+                        </div>
+                        {% endfor %}
+                    </div>     
+                    {% else %} 
+                      <h4>No Records</h4>   
+                    {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}          
