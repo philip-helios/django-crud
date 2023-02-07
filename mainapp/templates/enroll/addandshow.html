@@ -7,7 +7,15 @@
                 <h4>Add New Student</h4>
                 <form action=""  method="POST">
                     {% csrf_token %}
-                    {{form.as_p}}
+                    {{form.non_field_errors}}
+                    {% for field in form %}
+                        <div class="form-input-group">
+                            {{field.label_tag}} {{field}}
+                            {% for error in field.errors %}
+                            <span class="errorlist">{{error}}</span>
+                            {% endfor %}    
+                        </div>
+                    {% endfor %}  
                     <input type="submit" class="btn btn-success" value="Add">
                 </form>
             </div> 
